@@ -1,4 +1,10 @@
-
+#!/bin/sh
+#
+# vinoconfig
+#
+# Copyright(C) 2019, qhotaru All rights reserved.
+#
+#
 sudo cat <<EOS >> /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 <key name='enabled' type='b'>
 <summary>Enable remote access to the desktop</summary>
