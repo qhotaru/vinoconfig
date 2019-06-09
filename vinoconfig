@@ -1,0 +1,16 @@
+
+sudo cat <<EOS >> /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
+<key name='enabled' type='b'>
+<summary>Enable remote access to the desktop</summary>
+<description>
+If true, allows remote access to the desktop via the RFB
+protocol. Users on remote machines may then connect to the
+desktop using a VNC viewer.
+</description>
+<default>false</default>
+</key>
+EOS
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+gsettings set org.gnome.Vino require-encryption false
+gsettings set org.gnome.Vino prompt-enabled false
+
